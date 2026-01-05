@@ -6,11 +6,13 @@ import { App } from './app';
 import { Landing } from './landing/landing';
 import { SharedModule } from './shared/shared-module';
 import { ReactiveFormsModule } from "@angular/forms";
+import { Signup } from './signup/signup';
 
 @NgModule({
   declarations: [
     App,
-    Landing
+    Landing,
+    Signup
   ],
   imports: [
     BrowserModule,
