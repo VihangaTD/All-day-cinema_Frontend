@@ -7,12 +7,17 @@ import { Landing } from './landing/landing';
 import { SharedModule } from './shared/shared-module';
 import { ReactiveFormsModule } from "@angular/forms";
 import { Signup } from './signup/signup';
+import { VerifyEmail } from './verify-email/verify-email';
+import { provideHttpClient } from '@angular/common/http';
+import { Login } from './login/login';
 
 @NgModule({
   declarations: [
     App,
     Landing,
-    Signup
+    Signup,
+    VerifyEmail,
+    Login
   ],
   imports: [
     BrowserModule,
@@ -21,7 +26,8 @@ import { Signup } from './signup/signup';
     ReactiveFormsModule
 ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })
