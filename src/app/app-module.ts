@@ -10,6 +10,7 @@ import { Signup } from './signup/signup';
 import { VerifyEmail } from './verify-email/verify-email';
 import { provideHttpClient } from '@angular/common/http';
 import { Login } from './login/login';
+import { CdkHeaderCellDef } from "@angular/cdk/table";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { Login } from './login/login';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
 ],
   providers: [
     provideBrowserGlobalErrorListeners(),
