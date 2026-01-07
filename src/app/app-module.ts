@@ -8,9 +8,11 @@ import { SharedModule } from './shared/shared-module';
 import { ReactiveFormsModule } from "@angular/forms";
 import { Signup } from './signup/signup';
 import { VerifyEmail } from './verify-email/verify-email';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { Login } from './login/login';
 import { CdkHeaderCellDef } from "@angular/cdk/table";
+import { Home } from './user/home/home';
+import { authInterceptor } from './shared/interceptors/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { CdkHeaderCellDef } from "@angular/cdk/table";
     Landing,
     Signup,
     VerifyEmail,
-    Login
+    Login,
+    Home
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { CdkHeaderCellDef } from "@angular/cdk/table";
 ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideHttpClient()
+    provideHttpClient(withInterceptors([authInterceptor]))
   ],
   bootstrap: [App]
 })
