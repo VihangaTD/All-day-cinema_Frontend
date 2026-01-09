@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'verify-email', component: VerifyEmail },
   { path: 'home', component: Home, canActivate: [authGuard] },
   { path: 'forgot-password', component: ForgotPassword },
+  { path: 'reset-password', component: ResetPassword },
   {
     path: 'admin',
     loadChildren: () => import('../app/admin/admin-module').then((m) => m.AdminModule),

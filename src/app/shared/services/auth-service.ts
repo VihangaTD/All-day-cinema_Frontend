@@ -84,7 +84,7 @@ export class AuthService {
   }
 
   resetPassword(token:string,newPassword:string){
-    return this.http.post(this.apiUrl+'reset-password',{token,newPassword})
+    return this.http.post(this.apiUrl+'/reset-password',{token,newPassword})
   }
 
   initializeAuth():Promise<void>{
