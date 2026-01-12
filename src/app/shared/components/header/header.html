@@ -87,3 +87,7 @@
   </div>
 </ng-container>
 }
+
+@if (!showRouterOutlet) {
+  <ng-container *ngTemplateOutlet="headerBar"></ng-container>
+}
